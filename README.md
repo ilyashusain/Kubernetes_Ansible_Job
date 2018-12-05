@@ -2,6 +2,12 @@
 
 Here we create a playbook that integrates Ansible into our Kubernetes nginx pod. Typically on start-up, we would need to edit the nginx.conf file to proxy_pass for the jenkins server. Our ansible playbook automated this process.
 
+## Configure the master node
+
+Create a pair of ssh keys for our master node with ```ssh-keygen```, and paste the public key into the ```authorized_keys``` folder for this same master node. Next, copy the internal ip for the master node into ```/etc/ansible/hosts``` file. Ansible now has access to the master node.
+
+*NOTE:* This practice is unconventional, since ansible is used to configure slave nodes, but we will do this exercise for educational purposes. The carry-over to other use cases is clear e.g. configuring nginx for pods on other vms.
+
 Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script for the role is pasted below:
 
 ```

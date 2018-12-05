@@ -1,6 +1,6 @@
 # Kubernetes_Ansible_Job
 
-Here we will create a playbook that integrates Ansible into our Kubernetes nginx pod. Typically on start-up, we would need to edit the nginx.conf file in /etc/nginx to proxy_pass for the jenkins server. Our ansible playbook automates this process.
+Here we will create a playbook that integrates Ansible utility into our Kubernetes nginx pod. Typically on start-up, we would need to edit the nginx.conf file in /etc/nginx to proxy_pass for the jenkins server. Our ansible playbook automates this process.
 
 ## Configure the master node
 

@@ -27,3 +27,14 @@ Create an ansible role called ```nginx_jenkins``` and create a task that will ss
   - name: reload nginx
     shell: kubectl exec nginx-6688cb9fcb-w4srz service nginx reload  
 ```
+## Create the kubernetes services/deployments
+
+Run:
+
+```
+kubectl create -f jenkins
+kubectl create -f nginx
+kubectl create -f cluster-admin-role-binding.yml
+```
+
+Now we can run ```ansible-playbook autoRP.yml```, this will automatically configure nginx to reverse proxy on jenkins behalf.

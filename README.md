@@ -29,7 +29,7 @@ Create an ansible role called ```nginx_jenkins``` and create a task that will ss
 ```
 ## Create the kubernetes services/deployments
 
-Run:
+To create the specified deployments and services, run:
 
 ```
 kubectl create -f jenkins

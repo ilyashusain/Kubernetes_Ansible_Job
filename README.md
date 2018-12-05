@@ -5,7 +5,6 @@ Here we create a playbook that integrates Ansible into our Kubernetes nginx pod.
 Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script is pasted below:
 
 ```
-
 ---  
 
   - name: install git
@@ -19,6 +18,5 @@ Create an ansible role called ```nginx_jenkins``` and create a task that will ss
   - name: mv conf file
     shell: kubectl exec nginx-6688cb9fcb-w4srz mv nginx_config/nginx.conf /etc/nginx/
   - name: reload nginx
-    shell: kubectl exec nginx-6688cb9fcb-w4srz service nginx reload
-    
+    shell: kubectl exec nginx-6688cb9fcb-w4srz service nginx reload  
 ```

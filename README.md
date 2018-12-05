@@ -10,7 +10,7 @@ Create a pair of ssh keys in the ```/.ssh``` directory for our master node by ru
 
 ## Create the Ansible role
 
-Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script for the role is pasted below:
+Create an ansible role called ```nginx_jenkins```, and create a task for this role that will ssh into the nginx pod and configure the nginx.conf file to proxy pass the jenkins server. For more information on creating ansible roles see: https://github.com/ilyashusain/ansible_roles. The script for the role is pasted below:
 
 ```
 ---  
@@ -29,7 +29,7 @@ Create an ansible role called ```nginx_jenkins``` and create a task that will ss
 ```
 ## Create the kubernetes services/deployments
 
-To create the specified deployments and services, run:
+To create the specified deployments and services, run as before:
 
 ```
 kubectl create -f jenkins

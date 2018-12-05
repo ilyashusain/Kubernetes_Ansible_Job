@@ -2,7 +2,7 @@
 
 Here we create a playbook that integrates Ansible into our Kubernetes nginx pod. Typically on start-up, we would need to edit the nginx.conf file to proxy_pass for the jenkins server. Our ansible playbook automated this process.
 
-Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script is pasted below:
+Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script for the role is pasted below:
 
 ```
 ---  

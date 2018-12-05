@@ -1,0 +1,5 @@
+---
+- hosts: 10.142.0.6
+  roles:
+  - nginx_jenkins
+

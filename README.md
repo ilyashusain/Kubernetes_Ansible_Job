@@ -8,6 +8,8 @@ Create a pair of ssh keys for our master node with ```ssh-keygen```, and paste t
 
 *NOTE:* This practice is unconventional, since ansible is used to configure slave nodes, but we will do this exercise for educational purposes. The carry-over to other use cases is clear e.g. configuring nginx for pods on slave nodes.
 
+## Create the Ansible role
+
 Create an ansible role called ```nginx_jenkins``` and create a task that will ssh into the nginx pod and configure the nginx.conf file for us. The script for the role is pasted below:
 
 ```

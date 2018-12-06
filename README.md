@@ -14,7 +14,7 @@ Create an ansible role called ```nginx_jenkins```, and create a task for this ro
 
 ```
 ---
-  - name: apt update:
+  - name: apt update
     shell: kubectl exec nginx-6688cb9fcb-w4srz apt update
   - name: install git
     shell: kubectl exec nginx-6688cb9fcb-w4srz apt install git

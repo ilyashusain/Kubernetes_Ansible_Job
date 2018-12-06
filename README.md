@@ -13,7 +13,9 @@ Create a pair of ssh keys in the ```/.ssh``` directory for our master node by ru
 Create an ansible role called ```nginx_jenkins```, and create a task for this role that will ssh into the nginx pod and configure the nginx.conf file to proxy pass the jenkins server. For more information on creating ansible roles see: https://github.com/ilyashusain/ansible_roles. The script for the role is pasted below:
 
 ```
----  
+---
+  - name: apt update:
+    shell: kubectl exec nginx-6688cb9fcb-w4srz apt update
   - name: install git
     shell: kubectl exec nginx-6688cb9fcb-w4srz apt install git
   - name: install vim
